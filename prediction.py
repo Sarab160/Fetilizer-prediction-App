@@ -8,13 +8,14 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import precision_score,recall_score,f1_score,confusion_matrix
 df=pd.read_csv("Fertilizer Prediction.csv")
 
-# print(df.info())
-# # print(df["Crop Type"].unique)
-# # print(np.unique(df["Crop Type"]))
-# # print(df.shape)
-# # sns.pairplot(data=df)
-# # plt.show()
-# print(df.columns)
+print(df.info())
+print(df["Crop Type"].unique)
+print(np.unique(df["Crop Type"]))
+print(df.shape)
+sns.pairplot(data=df)
+plt.show()
+print(df.columns)
+
 x=df[['Temparature', 'Humidity ', 'Moisture',
        'Nitrogen', 'Potassium', 'Phosphorous']]
 le=LabelEncoder()
